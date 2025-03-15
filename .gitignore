@@ -1,0 +1,7 @@
+resources/
+Verbal_Communication_Skills_Trainer_venv/
+.gradio/
+__pycache__/
+
+todo.txt
+
