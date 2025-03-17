@@ -1,0 +1,5 @@
+1. Enforcement of a finalized embedding caching system.
+2. Introduction of LangGraph for a precise state tracking abilities and potent agentic behavior.
+3. Third party tools and improvement resources integration with LangGraph.
+4. Additional LLM for state logic assessment.
+5. Audio input and output features. Obviously!.

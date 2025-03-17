@@ -5,11 +5,11 @@ SESSION="batch_inference"
 SCRIPT="python3 batch_inference.py"
 
 PROMPTS=(
-  "What is the capital of France?"
+#   "What is the capital of France?"
   "Explain the theory of relativity."
   "How does photosynthesis work?"
   "Tell me a brief story about courage"
-#   "Tell me a brief story about wisdom."
+  "Tell me a brief story about wisdom."
 #   "Tell me a brief story about humor."
 #   "Tell me a brief story about humans."
 #   "Tell me a brief story about the moon."
@@ -37,7 +37,6 @@ for prompt in "${PROMPTS[@]:1}"; do
         tmux split-window -v -t "${SESSION}:0"
     fi
     sleep 0.5
-    # Correct quoting below (proper nested quotes):
     tmux send-keys -t "${SESSION}:0.${pane_count}" "${SCRIPT} \"${prompt}\"" C-m
     pane_count=$((pane_count + 1))
     tmux select-layout -t "${SESSION}" tiled
